@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89D01DB0-51CF-4088-8BCB-754590E448FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataLayer.Service.Interfaces</RootNamespace>
+    <AssemblyName>DataLayer.Service.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IDL.cs" />
+    <Compile Include="IDLModel.cs" />
+    <Compile Include="IDLOpenSortsStatusService.cs" />
+    <Compile Include="IDLService.cs" />
+    <Compile Include="IDLNarsService.cs" />
+    <Compile Include="IDLToDoItemService.cs" />
+    <Compile Include="Models\IDLGetDaysOpenSortBySupplierModel.cs" />
+    <Compile Include="Models\IDLGetNarsDaysOpenLmModel.cs" />
+    <Compile Include="Models\IDLGetNarsReportComparedReturnModel.cs" />
+    <Compile Include="Models\IDLGetOpenClosedStatusByMonthModel.cs" />
+    <Compile Include="Models\IDLGetOpenClosedPendingAllModel.cs" />
+    <Compile Include="Models\IDLGetStatusCountInputModel.cs" />
+    <Compile Include="Models\IDLGroupNameInputModel.cs" />
+    <Compile Include="Models\IDLNarsStatusCountModel.cs" />
+    <Compile Include="Models\IDLNarsStatusInputModel.cs" />
+    <Compile Include="Models\IDLNarsStatusModel.cs" />
+    <Compile Include="Models\IDLGetOpenClosedStatusByMonthInputModel.cs" />
+    <Compile Include="Models\IDLToDoItemsInputModel.cs" />
+    <Compile Include="Models\IDLToDoItemsReturnModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\AspNet\IDLAspNetUserModel.cs" />
+    <Compile Include="Repository\IDLQueryRepository.cs" />
+    <Compile Include="Repository\IDLRepository.cs" />
+    <Compile Include="Repository\IDLCommandRepository.cs" />
+    <Compile Include="Repository\IDLAspNetUserRepository.cs" />
+    <Compile Include="Repository\IDLUnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer.Entities\DataLayer.Entities.csproj">
+      <Project>{A571726A-ED81-4D9D-87C5-D010AE43B778}</Project>
+      <Name>DataLayer.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
